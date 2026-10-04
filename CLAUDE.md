@@ -34,6 +34,13 @@ Matched to `enzorabossi`'s bootcamp final project (Distrito Cerveza ecommerce fr
   separate decision, not inherited from the reference). Workflow: `npm ci` → lint → test → build
   with `VITE_BASE` → `upload-pages-artifact` → `deploy-pages`.
 
+## Local dev on Windows (Git Bash)
+
+Git Bash/MSYS rewrites POSIX-looking absolute paths in command arguments and env vars — e.g.
+`VITE_BASE=/Porfolio-Enzo-Rabossi/ npm run build` silently becomes
+`/Program Files/Git/Porfolio-Enzo-Rabossi/`. Prefix the command with `MSYS_NO_PATHCONV=1` whenever
+passing a path-like value (such as `VITE_BASE`) through Git Bash.
+
 ## Conventions
 
 - English for code, comments, commit messages and site copy. Conventional commits
