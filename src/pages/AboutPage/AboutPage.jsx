@@ -48,13 +48,21 @@ export function AboutPage() {
             <InfoBlock title="Based in" secondary>
               Copenhagen [ Denmark ]
             </InfoBlock>
+            <InfoBlock title="Languages" secondary>
+              Spanish, English
+            </InfoBlock>
             <InfoBlock title="Credit" secondary>
               {`Design and development, Enzo Rabossi © ${new Date().getFullYear()}`}
             </InfoBlock>
             <InfoBlock title="Social" secondary>
-              <a href="https://github.com/enzorabossi95" className={styles.socialLink}>
-                GitHub
-              </a>
+              <span className={styles.socialLinks}>
+                <a href="https://github.com/enzorabossi95" className={styles.socialLink}>
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/enzorabossi" className={styles.socialLink}>
+                  LinkedIn
+                </a>
+              </span>
             </InfoBlock>
           </div>
 
