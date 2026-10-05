@@ -1,0 +1,35 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 4rem var(--gutter) 2rem;
+}
+
+.name {
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-tight);
+  text-align: center;
+}
+
+.work {
+  padding: 3rem 0 4rem;
+}
+
+.workHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 var(--gutter);
+  margin-bottom: 2rem;
+}
+
+.workTitle {
+  font-size: var(--font-size-heading-md);
+  font-weight: 400;
+}
+
+.workLink {
+  font-size: var(--font-size-xs);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  white-space: nowrap;
+}

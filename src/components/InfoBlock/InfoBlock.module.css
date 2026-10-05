@@ -1,0 +1,22 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: var(--font-size-heading-sm);
+}
+
+.text {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-body);
+}
+
+.index {
+  margin-right: 0.6em;
+}
+
+.secondary {
+  color: var(--color-text-secondary);
+}

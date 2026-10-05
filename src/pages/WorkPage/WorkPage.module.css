@@ -1,0 +1,14 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 3rem var(--gutter) 2rem;
+}
+
+.title {
+  font-size: var(--font-size-heading-lg);
+  line-height: var(--line-height-tight);
+}
+
+.grid {
+  padding: 3rem 0 4rem;
+}

@@ -1,8 +1,82 @@
+import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
+import { Portrait } from '../../components/Portrait/Portrait.jsx'
+import { InfoBlock } from '../../components/InfoBlock/InfoBlock.jsx'
+import { ArchiveTable } from '../../components/ArchiveTable/ArchiveTable.jsx'
+import { stackBlocks } from '../../data/skills.js'
+import { timeline } from '../../data/timeline.js'
+import styles from './AboutPage.module.css'
+
 export function AboutPage() {
   return (
     <>
-      <h1>About</h1>
-      <p>The bio, stack blocks and timeline land in the next sprint.</p>
+      <h1 className="visually-hidden">About</h1>
+
+      <div className={styles.about}>
+        <Portrait
+          src="https://res.cloudinary.com/dataimagesenzo/image/upload/v1779770926/9a147a80-1f78-48a0-a834-bfde147b3760_qkwc7g.jpg"
+          alt="Enzo Rabossi"
+        />
+
+        <div className={styles.content}>
+          <div className={styles.intro}>
+            <p className={`${styles.paragraph} text-indent`}>
+              I'm a full stack developer based in Copenhagen. I was born in Argentina and moved
+              to Denmark a few years ago, where I now live with my partner and my dog.
+            </p>
+            <p className={`${styles.paragraph} text-indent`}>
+              For more than 7 years I worked in the beer world — I had a beer shop, my own
+              brewery and a bar. That path taught me to run a business, manage teams and solve
+              real problems. In parallel, I've always been interested in technology: I completed
+              a diploma in Full Stack Web Development at UTN, and I'm currently in The Bridge's
+              bootcamp, building projects and developing my skills as a developer.
+            </p>
+          </div>
+
+          <div className={styles.blocks}>
+            {stackBlocks.map((block, index) => (
+              <InfoBlock
+                key={block.id}
+                title={block.title}
+                index={String(index + 1).padStart(2, '0')}
+              >
+                {block.paragraph}
+              </InfoBlock>
+            ))}
+          </div>
+
+          <div className={styles.blocks}>
+            <InfoBlock title="Based in" secondary>
+              Copenhagen [ Denmark ]
+            </InfoBlock>
+            <InfoBlock title="Credit" secondary>
+              {`Design and development, Enzo Rabossi © ${new Date().getFullYear()}`}
+            </InfoBlock>
+            <InfoBlock title="Social" secondary>
+              <a href="https://github.com/enzorabossi95" className={styles.socialLink}>
+                GitHub
+              </a>
+            </InfoBlock>
+          </div>
+
+          <a className={styles.cta} href="/#contact">
+            Get in touch
+          </a>
+        </div>
+      </div>
+
+      <SectionIntro label="Background" meta="2017 — present">
+        From the brewery floor to the bootcamp — the path so far.
+      </SectionIntro>
+
+      <section className={styles.timeline}>
+        <ArchiveTable
+          columns={['Role', 'Place', 'Years']}
+          rows={timeline.map((item) => ({
+            id: item.role,
+            cells: [item.role, item.place, item.years],
+          }))}
+        />
+      </section>
     </>
   )
 }
