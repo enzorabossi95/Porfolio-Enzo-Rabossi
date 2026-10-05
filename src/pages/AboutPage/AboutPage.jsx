@@ -18,21 +18,30 @@ export function AboutPage() {
         />
 
         <div className={styles.content}>
-          <div className={styles.intro}>
-            <p className={`${styles.paragraph} text-indent`}>
-              I'm a full stack developer based in Copenhagen. I was born in Argentina and moved
-              to Denmark a few years ago, where I now live with my partner and my dog.
+          <div className={`${styles.intro} scroll-in-group`}>
+            <p className={styles.paragraph}>
+              <span className="text-box">
+                <span className="scroll-in text-indent">
+                  I'm a full stack developer based in Copenhagen. I was born in Argentina and
+                  moved to Denmark a few years ago, where I now live with my partner and my dog.
+                </span>
+              </span>
             </p>
-            <p className={`${styles.paragraph} text-indent`}>
-              For more than 7 years I worked in the beer world — I had a beer shop, my own
-              brewery and a bar. That path taught me to run a business, manage teams and solve
-              real problems. In parallel, I've always been interested in technology: I completed
-              a diploma in Full Stack Web Development at UTN, and I'm currently in The Bridge's
-              bootcamp, building projects and developing my skills as a developer.
+            <p className={styles.paragraph}>
+              <span className="text-box">
+                <span className="scroll-in text-indent">
+                  For more than 7 years I worked in the beer world — I had a beer shop, my own
+                  brewery and a bar. That path taught me to run a business, manage teams and
+                  solve real problems. In parallel, I've always been interested in technology: I
+                  completed a diploma in Full Stack Web Development at UTN, and I'm currently in
+                  The Bridge's bootcamp, building projects and developing my skills as a
+                  developer.
+                </span>
+              </span>
             </p>
           </div>
 
-          <div className={styles.blocks}>
+          <div className={`${styles.blocks} scroll-in-group`}>
             {stackBlocks.map((block, index) => (
               <InfoBlock
                 key={block.id}
@@ -44,7 +53,7 @@ export function AboutPage() {
             ))}
           </div>
 
-          <div className={styles.blocks}>
+          <div className={`${styles.blocks} scroll-in-group`}>
             <InfoBlock title="Based in" secondary>
               Copenhagen [ Denmark ]
             </InfoBlock>
@@ -56,17 +65,17 @@ export function AboutPage() {
             </InfoBlock>
             <InfoBlock title="Social" secondary>
               <span className={styles.socialLinks}>
-                <a href="https://github.com/enzorabossi95" className={styles.socialLink}>
+                <a href="https://github.com/enzorabossi95" className="link-line">
                   GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/enzorabossi" className={styles.socialLink}>
+                <a href="https://www.linkedin.com/in/enzorabossi" className="link-line">
                   LinkedIn
                 </a>
               </span>
             </InfoBlock>
           </div>
 
-          <a className={styles.cta} href="/#contact">
+          <a className={`${styles.cta} link-line`} href="/#contact">
             Get in touch
           </a>
         </div>

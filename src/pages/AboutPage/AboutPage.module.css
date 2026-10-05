@@ -9,16 +9,19 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  min-width: 0;
 }
 
 .intro {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
   max-width: 44rem;
 }
 
 .paragraph {
+  min-width: 0;
   font-size: var(--font-size-l);
   line-height: var(--line-height-body);
 }
@@ -34,16 +37,9 @@
   gap: 1.5rem;
 }
 
-.socialLink {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
 .cta {
   width: fit-content;
   font-size: var(--font-size-l);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 
 .timeline {

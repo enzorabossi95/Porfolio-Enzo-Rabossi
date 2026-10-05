@@ -5,7 +5,7 @@ export function ProjectCard({ project, index }) {
   const hasLinks = Boolean(project.repo || project.demo)
 
   return (
-    <article className={styles.card}>
+    <article className={`${styles.card} reveal-fade`}>
       <div className={styles.imageBox}>
         {project.image ? (
           <img className={styles.image} src={project.image} alt="" />
@@ -37,22 +37,12 @@ export function ProjectCard({ project, index }) {
       {hasLinks && (
         <p className={styles.links}>
           {project.repo && (
-            <a
-              className={styles.link}
-              href={project.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="link-line" href={project.repo} target="_blank" rel="noopener noreferrer">
               Code
             </a>
           )}
           {project.demo && (
-            <a
-              className={styles.link}
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="link-line" href={project.demo} target="_blank" rel="noopener noreferrer">
               Live demo
             </a>
           )}

@@ -20,7 +20,9 @@ export function NotesPage() {
   return (
     <>
       <section className={styles.hero}>
-        <h1 className={styles.title}>Notes</h1>
+        <h1 className={`${styles.title} text-box`}>
+          <span className="text-in">Notes</span>
+        </h1>
       </section>
 
       <SectionIntro label="Notes" meta={`${rows.length} entries`}>

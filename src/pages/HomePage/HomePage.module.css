@@ -29,8 +29,6 @@
 
 .workLink {
   font-size: var(--font-size-xs);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
   white-space: nowrap;
 }
 

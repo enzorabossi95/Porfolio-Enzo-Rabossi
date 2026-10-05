@@ -1,0 +1,113 @@
+/* ==============================
+   Entrance reveals — every rule here is scoped under html.motion-ready
+   (see useMotionReady), so without JS or under reduced motion, elements
+   render in their final, fully visible state with no transform/opacity.
+============================== */
+
+.text-box {
+  display: inline-block;
+  overflow: hidden;
+}
+
+html.motion-ready .text-in {
+  display: inline-block;
+  transform: translateY(105%);
+  animation: reveal-line 1.2s var(--ease-reveal) var(--stagger-delay, 0s) both;
+}
+
+html.motion-ready .scroll-in {
+  display: inline-block;
+  transform: translateY(105%);
+}
+
+html.motion-ready .scroll-in.is-visible {
+  animation: reveal-line 1.2s var(--ease-reveal) var(--stagger-delay, 0s) both;
+}
+
+@keyframes reveal-line {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+html.motion-ready .reveal-border {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+html.motion-ready .reveal-border.is-visible {
+  animation: reveal-border-in 1.7s var(--ease-reveal) both;
+}
+
+@keyframes reveal-border-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+html.motion-ready .reveal-fade {
+  opacity: 0;
+  transition: opacity 1.7s var(--ease-reveal);
+}
+
+html.motion-ready .reveal-fade.is-visible {
+  opacity: 1;
+}
+
+html.motion-ready .reveal-rise {
+  animation: reveal-rise-in 1.7s var(--ease-reveal) both;
+}
+
+@keyframes reveal-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   Link underline sweep — purely additive (never hides content), so only
+   the transition itself needs gating. Under reduced motion the underline
+   is just always on, which is the more accessible default anyway.
+============================== */
+
+.link-line {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 1px;
+}
+
+.link-line::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .link-line::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.7s var(--ease-reveal);
+  }
+
+  .link-line:hover::before,
+  .link-line:focus-visible::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

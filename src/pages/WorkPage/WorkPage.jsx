@@ -7,7 +7,9 @@ export function WorkPage() {
   return (
     <>
       <section className={styles.hero}>
-        <h1 className={styles.title}>Work</h1>
+        <h1 className={`${styles.title} text-box`}>
+          <span className="text-in">Work</span>
+        </h1>
       </section>
 
       <SectionIntro label="Work" meta={`${projects.length} projects`}>

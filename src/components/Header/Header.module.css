@@ -34,9 +34,8 @@
   font-size: var(--font-size-xs);
 }
 
-.navLink[aria-current='page'] {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+.navLink[aria-current='page']::before {
+  transform: scaleX(1) !important;
 }
 
 .contactButton {

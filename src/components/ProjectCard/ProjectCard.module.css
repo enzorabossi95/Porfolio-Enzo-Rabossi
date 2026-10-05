@@ -18,6 +18,17 @@
   object-fit: cover;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .image {
+    transition: transform 1s var(--ease-hover);
+  }
+
+  .card:hover .image,
+  .card:focus-within .image {
+    transform: scale(1.02);
+  }
+}
+
 .placeholder {
   display: flex;
   flex-direction: column;
@@ -63,10 +74,5 @@
 .links {
   display: flex;
   gap: 1rem;
-}
-
-.link {
   font-size: var(--font-size-xs);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }

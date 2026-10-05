@@ -5,30 +5,46 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={`hairline ${styles.border}`} />
+      <div className={`hairline reveal-border ${styles.border}`} />
 
-      <p className={styles.year}>© {year}</p>
+      <div className="scroll-in-group">
+        <p className="text-box">
+          <span className="scroll-in">© {year}</span>
+        </p>
+      </div>
 
       <div className={styles.right}>
-        <div className={styles.block}>
-          <p className="micro-label">[ Open ]</p>
-          <p className={`${styles.text} text-indent`}>
-            Open to full-time roles and freelance work, based in Copenhagen or remote. Feel free
-            to{' '}
-            <a className={styles.link} href="/#contact">
-              say hello
-            </a>
-            .
+        <div className={`${styles.block} scroll-in-group`}>
+          <p className="text-box">
+            <span className="scroll-in micro-label">[ Open ]</span>
+          </p>
+          <p className={styles.text}>
+            <span className="text-box">
+              <span className="scroll-in text-indent">
+                Open to full-time roles and freelance work, based in Copenhagen or remote. Feel
+                free to{' '}
+                <a className="link-line" href="/#contact">
+                  say hello
+                </a>
+                .
+              </span>
+            </span>
           </p>
         </div>
 
-        <div className={styles.block}>
-          <p className="micro-label">[ Contact ]</p>
+        <div className={`${styles.block} scroll-in-group`}>
+          <p className="text-box">
+            <span className="scroll-in micro-label">[ Contact ]</span>
+          </p>
           <p className={styles.text}>
-            Email:{' '}
-            <a className={styles.link} href="mailto:enzorabossi@gmail.com">
-              enzorabossi@gmail.com
-            </a>
+            <span className="text-box">
+              <span className="scroll-in">
+                Email:{' '}
+                <a className="link-line" href="mailto:enzorabossi@gmail.com">
+                  enzorabossi@gmail.com
+                </a>
+              </span>
+            </span>
           </p>
         </div>
       </div>
