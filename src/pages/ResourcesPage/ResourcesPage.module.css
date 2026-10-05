@@ -3,15 +3,8 @@
   font-size: var(--font-size-heading-md);
 }
 
-.group {
-  padding: 1.5rem var(--gutter);
-  border-top: 1px solid var(--color-border);
-}
-
-.heading {
-  margin-bottom: 1rem;
-  font-size: var(--font-size-l);
-  font-weight: 400;
+.tabsWrapper {
+  padding: 0 var(--gutter) 4rem;
 }
 
 .list {
@@ -23,13 +16,6 @@
 .item {
   display: flex;
   flex-direction: column;
-}
-
-.link {
-  font-size: var(--font-size-m);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  width: fit-content;
 }
 
 .note {
