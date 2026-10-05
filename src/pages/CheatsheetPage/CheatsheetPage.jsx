@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { cheatsheets } from '../../data/cheatsheets.js'
 import { NotFoundPage } from '../NotFoundPage/NotFoundPage.jsx'
 import styles from './CheatsheetPage.module.css'
@@ -6,6 +7,10 @@ import styles from './CheatsheetPage.module.css'
 export function CheatsheetPage() {
   const { slug } = useParams()
   const sheet = cheatsheets.find((item) => item.slug === slug)
+
+  // Falsy when there's no match — NotFoundPage (rendered below) sets its own
+  // title instead, so this never fights it.
+  useDocumentTitle(sheet && `${sheet.title} notes, Enzo Rabossi`)
 
   if (!sheet) {
     return <NotFoundPage />

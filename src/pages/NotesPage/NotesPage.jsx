@@ -1,9 +1,12 @@
 import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
 import { ArchiveTable } from '../../components/ArchiveTable/ArchiveTable.jsx'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { cheatsheets } from '../../data/cheatsheets.js'
 import styles from './NotesPage.module.css'
 
 export function NotesPage() {
+  useDocumentTitle('Notes, Enzo Rabossi')
+
   const rows = [
     ...cheatsheets.map((sheet) => ({
       id: sheet.slug,

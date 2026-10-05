@@ -1,4 +1,5 @@
 import { Tabs } from '../../components/Tabs/Tabs.jsx'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { resources } from '../../data/resources.js'
 import styles from './ResourcesPage.module.css'
 
@@ -10,6 +11,8 @@ function slugify(text) {
 }
 
 export function ResourcesPage() {
+  useDocumentTitle('Resources, Enzo Rabossi')
+
   const tabs = resources.map((group) => ({
     id: slugify(group.category),
     label: group.category,

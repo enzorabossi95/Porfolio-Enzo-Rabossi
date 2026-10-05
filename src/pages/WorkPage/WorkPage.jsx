@@ -1,9 +1,12 @@
 import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
 import { ProjectGrid } from '../../components/ProjectGrid/ProjectGrid.jsx'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { projects } from '../../data/projects.js'
 import styles from './WorkPage.module.css'
 
 export function WorkPage() {
+  useDocumentTitle('Work, Enzo Rabossi')
+
   return (
     <>
       <section className={styles.hero}>

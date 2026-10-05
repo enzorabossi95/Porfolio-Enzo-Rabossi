@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom'
 import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
 import { ProjectGrid } from '../../components/ProjectGrid/ProjectGrid.jsx'
 import { ContactForm } from '../../components/ContactForm/ContactForm.jsx'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { projects } from '../../data/projects.js'
 import styles from './HomePage.module.css'
 
 export function HomePage() {
+  useDocumentTitle('Enzo Rabossi, full stack developer in Copenhagen')
+
   const featured = projects.slice(0, 2)
 
   return (

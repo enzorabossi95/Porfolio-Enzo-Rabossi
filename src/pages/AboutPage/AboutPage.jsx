@@ -2,11 +2,14 @@ import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
 import { Portrait } from '../../components/Portrait/Portrait.jsx'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock.jsx'
 import { ArchiveTable } from '../../components/ArchiveTable/ArchiveTable.jsx'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle.js'
 import { stackBlocks } from '../../data/skills.js'
 import { timeline } from '../../data/timeline.js'
 import styles from './AboutPage.module.css'
 
 export function AboutPage() {
+  useDocumentTitle('About, Enzo Rabossi')
+
   return (
     <>
       <h1 className="visually-hidden">About</h1>
