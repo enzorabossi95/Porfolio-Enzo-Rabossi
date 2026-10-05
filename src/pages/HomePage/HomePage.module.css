@@ -33,3 +33,20 @@
   text-underline-offset: 0.2em;
   white-space: nowrap;
 }
+
+.contact {
+  padding: 2rem var(--gutter) 6rem;
+  scroll-margin-top: 6rem;
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contactTitle {
+  font-size: var(--font-size-heading-md);
+  font-weight: 400;
+}

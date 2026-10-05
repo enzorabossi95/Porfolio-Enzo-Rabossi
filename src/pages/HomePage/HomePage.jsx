@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SectionIntro } from '../../components/SectionIntro/SectionIntro.jsx'
 import { ProjectGrid } from '../../components/ProjectGrid/ProjectGrid.jsx'
+import { ContactForm } from '../../components/ContactForm/ContactForm.jsx'
 import { projects } from '../../data/projects.js'
 import styles from './HomePage.module.css'
 
@@ -29,6 +30,14 @@ export function HomePage() {
           <ProjectGrid projects={featured} />
         </section>
       )}
+
+      <section id="contact" className={styles.contact}>
+        <div className={styles.contactHeader}>
+          <p className="micro-label">[ Contact ]</p>
+          <h2 className={styles.contactTitle}>Get in touch</h2>
+        </div>
+        <ContactForm />
+      </section>
     </>
   )
 }
