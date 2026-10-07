@@ -1,0 +1,48 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: var(--grid-gap);
+  padding: 2.5rem var(--gutter) 3rem;
+}
+
+.border {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+.year {
+  font-size: var(--font-size-xs);
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  max-width: 24rem;
+}
+
+.text {
+  min-width: 0;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-body);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .right {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,59 @@
+/* 12-column page scaffold. Components span explicit column ranges within it
+   rather than mirroring the reference's purpose-built 2-column grids directly. */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  column-gap: var(--grid-gap);
+  padding-inline: var(--gutter);
+}
+
+/* First-line indent on a paragraph, reference's signature detail.
+   Depth varies by context — override --indent on the element when needed. */
+.text-indent {
+  text-indent: var(--indent, 4vw);
+}
+
+@media (max-width: 768px) {
+  .text-indent {
+    text-indent: var(--indent-mobile, 10vw);
+  }
+}
+
+/* Bracketed micro-labels ("[ Work ]") and other small meta text. */
+.micro-label {
+  font-size: var(--font-size-micro);
+  color: var(--color-text);
+}
+
+/* Explicit index numbers ("01", "02") placed as sibling markup, not generated content —
+   ours vary per context, unlike the reference's single auto "01". */
+.index-number {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-secondary);
+}
+
+/* Small parenthesized counts next to nav links, e.g. Work (4). Pair with a real
+   aria-label on the parent link — this is decorative, not the accessible text. */
+.count {
+  font-size: var(--font-size-micro);
+  margin-inline-start: 0.2em;
+}
+
+.hairline {
+  height: 1px;
+  width: 100%;
+  background: var(--color-border);
+}
+
+/* Visually hides content while keeping it available to assistive tech. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

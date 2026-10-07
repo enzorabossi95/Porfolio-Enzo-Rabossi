@@ -1,0 +1,19 @@
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 22rem;
+  border-radius: var(--radius-xs);
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  .wrapper {
+    position: sticky;
+    top: calc(var(--gutter) + 4rem);
+  }
+}

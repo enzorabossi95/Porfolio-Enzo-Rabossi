@@ -1,0 +1,44 @@
+:root {
+  /* Color — strictly monochrome, all color comes from project imagery */
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-text-secondary: #6b6b6b; /* AA-safe vs. the reference's raw 40%-opacity black */
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-strong: rgba(0, 0, 0, 0.38);
+
+  /* Font */
+  --font-primary: 'General Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Type scale — clamped, with accessible minimums (micro never below 12px, body never below 16px) */
+  --font-size-micro: clamp(12px, 0.8vw, 14px); /* nav counts, index numbers, meta */
+  --font-size-xs: clamp(13px, 1vw, 16px);
+  --font-size-body: clamp(16px, 1.25vw, 18px); /* body default */
+  --font-size-m: clamp(17px, 1.55vw, 22px); /* paragraphs, project titles, archive rows */
+  --font-size-l: clamp(20px, 2vw, 28px);
+  --font-size-heading-sm: clamp(28px, 3vw, 48px); /* About block titles */
+  --font-size-heading-md: clamp(36px, 3.6vw, 64px); /* "Selected work" section titles */
+  --font-size-heading-lg: clamp(48px, 8vw, 140px); /* Work/Archive/Notes hero titles */
+  --font-size-display: clamp(56px, 11vw, 180px); /* giant "Enzo Rabossi" on Home */
+
+  --line-height-tight: 1;
+  --line-height-snug: 1.1;
+  --line-height-body: 1.3;
+
+  /* Spacing & grid */
+  --gutter: clamp(16px, 2.5vw, 48px);
+  --grid-gap: clamp(8px, 1vw, 16px);
+  --grid-columns: 12;
+
+  /* Radius */
+  --radius-xs: 3px;
+  --radius-s: 4px;
+
+  /* Motion */
+  --ease-reveal: cubic-bezier(0.18, 0.66, 0.18, 1); /* reveals, hairlines, hover sweeps */
+  --ease-transition: cubic-bezier(0.76, 0, 0.47, 0.95); /* page-transition panel */
+  --ease-hover: cubic-bezier(0.21, 0.83, 0.27, 1.01); /* hover scale/arrow */
+
+  /* Layering */
+  --z-header: 1000;
+  --z-overlay: 1500;
+}
